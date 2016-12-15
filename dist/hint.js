@@ -1415,7 +1415,7 @@ function decorateRootScope($delegate, $parse) {
     for (var i = 0; i < elts.length; i++) {
       elt = angular.element(elts[i]);
       scope = elt.scope();
-      if (scope.$id === scopeId) {
+      if (scope && scope.$id === scopeId) {
         return elt;
       }
     }
